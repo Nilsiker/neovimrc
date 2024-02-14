@@ -13,6 +13,12 @@ return {
         vim.keymap.set("n", "<leader>b", vim.cmd.NvimTreeFocus)
 
         -- empty setup using defaults
-        require("nvim-tree").setup()
+        require("nvim-tree").setup({
+            actions = {
+                open_file = {
+                    quit_on_open = true
+                }
+            }
+        })
     end
 }
